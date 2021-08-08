@@ -32,7 +32,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    Snap \
+    OPcam
 
 # Dirac
 $(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
