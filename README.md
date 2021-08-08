@@ -6,14 +6,14 @@ The Realme 2 (codenamed _"RMX1805"_) is a budget smartphone from Realme announce
 | ----------------------- | :---------------------------------------------------------- |
 | SoC                     | Qualcomm Snapdragon 450 octa-core processor                 |
 | CPU                     | 8x ARM Cortex A53, 1.8GHz                                   |
-| GPU                     | Adreno 506, Full HD 1080p 60fps                             |
+| GPU                     | Adreno 506, Full HD 1080p 30fps                             |
 | Memory                  | 3GB / 4GB                                                   |
 | Android version         | 8.1                                                         |
 | Storage                 | 32 / 64 GB                                                  |
 | MicroSD                 | Up to 256 GB                                                |
-| Battery                 | Non-removable Li-Po 4000 mAh                                |
+| Battery                 | Non-removable Li-Po 4230mAh                                 |
 | Display                 | 1520x720 pixels, 6.2"                                       |
-| Rear camera 2           | 13MP+2MP, f/2.2 aperture, 5P lens                           |
+| Rear camera 2           | 13MP (f/2.2, 1.12-micron) + 2MP(f/2.4, 1.75-micron)         |
 | Front camera            | 8MP, 1.12μm pixels, f/2.2 aperture lens                     |
 
 
