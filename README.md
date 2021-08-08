@@ -4,7 +4,7 @@ The Realme 2 (codenamed _"RMX1805"_) is a budget smartphone from Realme announce
 
 | Device                  | Realme 2                                                    |
 | ----------------------- | :---------------------------------------------------------- |
-| SoC                     | Qualcomm Snapdragon 450 octa-core processor                 |
+| Chipset                 | Qualcomm Snapdragon 450 octa-core processor                 |
 | CPU                     | 8x ARM Cortex A53, 1.8GHz                                   |
 | GPU                     | Adreno 506, Full HD 1080p 30fps                             |
 | Memory                  | 3GB / 4GB                                                   |
