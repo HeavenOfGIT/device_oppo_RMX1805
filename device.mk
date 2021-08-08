@@ -223,5 +223,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.charger.enable_suspend=true
 
+# Prebuilt Google Sounds
+PRODUCT_PACKAGES += \
+    PrebuiltGoogleSounds
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/RMX1805/RMX1805-vendor.mk)
