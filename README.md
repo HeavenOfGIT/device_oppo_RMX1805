@@ -12,7 +12,7 @@ The Realme 2 (codenamed _"RMX1805"_) is a budget smartphone from Realme announce
 | Storage                 | 32 / 64 GB                                                  |
 | MicroSD                 | Up to 256 GB                                                |
 | Battery                 | Non-removable Li-Po 4000 mAh                                |
-| Display                 | 2340 x 1080 (19:5:9), 6.3 inch                              |
+| Display                 | 1520x720 pixels, 6.2"                                       |
 | Rear camera 2           | 13MP+2MP, f/2.2 aperture, 5P lens                           |
 | Front camera            | 8MP, 1.12μm pixels, f/2.2 aperture lens                     |
 
