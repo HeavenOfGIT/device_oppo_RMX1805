@@ -9,3 +9,6 @@
 
 # Light
 /system/bin/hw/android\.hardware\.light@2\.0-service\.RMX1805 u:object_r:hal_light_default_exec:s0
+
+# Smart Charging
+/sys/class/power_supply/battery/input_suspend                                          u:object_r:sysfs_battery_supply:s0
