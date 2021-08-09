@@ -83,7 +83,26 @@
             </intent-filter>
         </receiver>
 
-        <!-- Quick Settings Tiles -->      
+        <!-- Quick Settings Tiles -->
+        <service
+            android:name="com.realmeparts.DCModeTileService"
+            android:icon="@drawable/ic_dc_tile"
+            android:label="@string/tile_dc_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.realmeparts.SRGBModeTileService"
+            android:icon="@drawable/ic_srgb_tile"
+            android:label="@string/tile_srgb_mode"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE"/>
+            </int>
         <service
             android:name="com.realmeparts.GameModeTileService"
             android:icon="@drawable/ic_game_tile"
@@ -93,8 +112,8 @@
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service>
-      
+       </service>
+
         <service android:name="com.realmeparts.FPSInfoService"
                 android:exported="false">
         </service>

@@ -94,6 +94,21 @@ public class DeviceSettings extends PreferenceFragment
         addPreferencesFromResource(R.xml.main);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
+        mDCModeSwitch = findPreference(KEY_DC_SWITCH);
+        mDCModeSwitch.setEnabled(DCModeSwitch.isSupported());
+        mDCModeSwitch.setChecked(DCModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mDCModeSwitch.setOnPreferenceChangeListener(new DCModeSwitch());
+
+        mSRGBModeSwitch = findPreference(KEY_SRGB_SWITCH);
+        mSRGBModeSwitch.setEnabled(SRGBModeSwitch.isSupported());
+        mSRGBModeSwitch.setChecked(SRGBModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mSRGBModeSwitch.setOnPreferenceChangeListener(new SRGBModeSwitch());
+
+        mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
+        mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
+        mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
+        mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch(getContext()));
+
         mOTGModeSwitch = (TwoStatePreference) findPreference(KEY_OTG_SWITCH);
         mOTGModeSwitch.setEnabled(OTGModeSwitch.isSupported());
         mOTGModeSwitch.setChecked(OTGModeSwitch.isCurrentlyEnabled(this.getContext()));
@@ -125,10 +140,27 @@ public class DeviceSettings extends PreferenceFragment
         mSeekBarPreference.setEnabled(mSmartChargingSwitch.isChecked());
         SeekBarPreference.mProgress = prefs.getInt("seek_bar", 95);
 
+        mRefreshRate90Forced = findPreference("refresh_rate_90Forced");
+        mRefreshRate90Forced.setChecked(prefs.getBoolean("refresh_rate_90Forced", false));
+        mRefreshRate90Forced.setOnPreferenceChangeListener(new RefreshRateSwitch(getContext()));
+
+        mRefreshRate90 = findPreference("refresh_rate_90");
+        mRefreshRate90.setChecked(RefreshRateSwitch.isCurrentlyEnabled(this.getContext()));
+        mRefreshRate90.setOnPreferenceChangeListener(new RefreshRateSwitch(getContext()));
+
+        mRefreshRate60 = findPreference("refresh_rate_60");
+        mRefreshRate60.setChecked(!RefreshRateSwitch.isCurrentlyEnabled(this.getContext()));
+        mRefreshRate60.setOnPreferenceChangeListener(new RefreshRateSwitch(getContext()));
+
         mFpsInfo = findPreference(KEY_FPS_INFO);
         mFpsInfo.setChecked(prefs.getBoolean(KEY_FPS_INFO, false));
         mFpsInfo.setOnPreferenceChangeListener(this);
-    
+
+        mCABC = (SecureSettingListPreference) findPreference(KEY_CABC);
+        mCABC.setValue(Utils.getStringProp(CABC_SYSTEM_PROPERTY, "0"));
+        mCABC.setSummary(mCABC.getEntry());
+        mCABC.setOnPreferenceChangeListener(this);
+
         // Few checks to enable/disable options when activity is launched
         if ((prefs.getBoolean("refresh_rate_90", false) && prefs.getBoolean("refresh_rate_90Forced", false))) {
             mRefreshRate60.setEnabled(false);
